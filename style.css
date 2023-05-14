@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    user-select: none;
+    background-color: #1f1f1f;
+    transition: all 3s;
+}
+#main {
+    position: fixed;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    user-select: text;
+    transition: all 1s;
+}
+#main::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    height: 20px;
+    width: 8px;
+    transform: translate(2px, -2px);
+}
+.untyping::after {
+    animation: cursor 0.5s steps(1) infinite;
+}
+@keyframes cursor {
+    0%, 100% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: transparent;
+    }
+}
